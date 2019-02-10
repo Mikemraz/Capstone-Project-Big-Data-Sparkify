@@ -12680,7 +12680,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import libraries</span>
@@ -12701,6 +12701,26 @@ div#notebook {
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Waiting for a Spark session to start...
+Spark Initialization Done! ApplicationId = app-20190210165335-0000
+KERNEL_ID = 67ea9629-7933-426f-adf1-ddf528521ad8
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12897,25 +12917,25 @@ only showing top 20 rows
 <pre>+---------+
 |sessionId|
 +---------+
-|     1217|
 |     3069|
-|       54|
-|      558|
-|     3280|
-|     4126|
-|     3009|
-|     1277|
-|      191|
-|     1840|
-|     3199|
-|     2214|
-|     1280|
-|      474|
-|      222|
-|     2529|
-|     3327|
-|     1677|
 |     1371|
+|      222|
+|     3327|
+|     1280|
+|     4126|
+|     1277|
+|      720|
+|     1840|
+|     2944|
+|      558|
+|     2214|
+|     3280|
+|      474|
+|     3199|
+|     2529|
+|     3009|
+|     1677|
+|      191|
 |     3506|
 +---------+
 only showing top 20 rows
@@ -13176,7 +13196,7 @@ churn rate of male is  0.2644628099173554
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_valid_songs</span><span class="o">.</span><span class="n">hist</span><span class="p">([</span><span class="s1">&#39;SongsPlayed&#39;</span><span class="p">],</span> <span class="n">by</span><span class="o">=</span><span class="s1">&#39;churn&#39;</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">density</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -13193,7 +13213,7 @@ churn rate of male is  0.2644628099173554
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[21]:</div>
+<div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -13233,7 +13253,7 @@ churn rate of male is  0.2644628099173554
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_valid_thumbsup</span> <span class="o">=</span> <span class="n">df_valid</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df_valid</span><span class="o">.</span><span class="n">page</span><span class="o">==</span><span class="s1">&#39;Thumbs Up&#39;</span><span class="p">)</span> \
@@ -13251,14 +13271,14 @@ churn rate of male is  0.2644628099173554
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[24]:</div>
+<div class="prompt output_prompt">Out[16]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([&lt;matplotlib.axes._subplots.AxesSubplot object at 0x2b2cbba05860&gt;,
-       &lt;matplotlib.axes._subplots.AxesSubplot object at 0x2b2cbba5c9b0&gt;], dtype=object)</pre>
+<pre>array([&lt;matplotlib.axes._subplots.AxesSubplot object at 0x2b4958a2d438&gt;,
+       &lt;matplotlib.axes._subplots.AxesSubplot object at 0x2b4958a3a278&gt;], dtype=object)</pre>
 </div>
 
 </div>
@@ -13284,7 +13304,7 @@ churn rate of male is  0.2644628099173554
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ThumbsUps for people who stay&#39;</span><span class="p">,</span><span class="n">df_valid_thumbsup</span><span class="p">[</span><span class="n">df_valid_thumbsup</span><span class="p">[</span><span class="s1">&#39;churn&#39;</span><span class="p">]</span><span class="o">==</span><span class="kc">False</span><span class="p">][</span><span class="s1">&#39;ThumbsUps&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
@@ -13317,7 +13337,7 @@ ThumbsUps for people who leave 43.87755102040816
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_valid_thumbsdown</span> <span class="o">=</span> <span class="n">df_valid</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df_valid</span><span class="o">.</span><span class="n">page</span><span class="o">==</span><span class="s1">&#39;Thumbs Down&#39;</span><span class="p">)</span> \
@@ -13335,14 +13355,14 @@ ThumbsUps for people who leave 43.87755102040816
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[25]:</div>
+<div class="prompt output_prompt">Out[18]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([&lt;matplotlib.axes._subplots.AxesSubplot object at 0x2b2cbb96bba8&gt;,
-       &lt;matplotlib.axes._subplots.AxesSubplot object at 0x2b2cbb9749e8&gt;], dtype=object)</pre>
+<pre>array([&lt;matplotlib.axes._subplots.AxesSubplot object at 0x2b4958b01ac8&gt;,
+       &lt;matplotlib.axes._subplots.AxesSubplot object at 0x2b4958b107f0&gt;], dtype=object)</pre>
 </div>
 
 </div>
@@ -13368,7 +13388,7 @@ ThumbsUps for people who leave 43.87755102040816
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ThumbsDowns for people who stay&#39;</span><span class="p">,</span><span class="n">df_valid_thumbsdown</span><span class="p">[</span><span class="n">df_valid_thumbsup</span><span class="p">[</span><span class="s1">&#39;churn&#39;</span><span class="p">]</span><span class="o">==</span><span class="kc">False</span><span class="p">][</span><span class="s1">&#39;ThumbsDowns&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
@@ -13389,8 +13409,8 @@ ThumbsUps for people who leave 43.87755102040816
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>ThumbsDowns for people who stay 12.366568914956012
-ThumbsDowns for people who leave 14.458333333333334
+<pre>ThumbsDowns for people who stay 12.187683284457478
+ThumbsDowns for people who leave 15.729166666666666
 </pre>
 </div>
 </div>
@@ -13438,7 +13458,7 @@ ThumbsDowns for people who leave 14.458333333333334
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_gender</span> <span class="o">=</span> <span class="n">df_valid</span><span class="o">.</span><span class="n">dropDuplicates</span><span class="p">([</span><span class="s1">&#39;userId&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s1">&#39;userId&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="s1">&#39;userId&#39;</span><span class="p">,</span><span class="s1">&#39;gender&#39;</span><span class="p">])</span>
@@ -13456,7 +13476,7 @@ ThumbsDowns for people who leave 14.458333333333334
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[19]:</div>
+<div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -13473,7 +13493,7 @@ ThumbsDowns for people who leave 14.458333333333334
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_gender</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -13537,7 +13557,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_songs</span> <span class="o">=</span> <span class="n">df_valid</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df_valid</span><span class="o">.</span><span class="n">song</span><span class="o">!=</span><span class="s1">&#39;null&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;userId&#39;</span><span class="p">)</span> \
@@ -13552,7 +13572,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_songs</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -13616,7 +13636,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_thumbsup</span> <span class="o">=</span> <span class="n">df_valid</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df_valid</span><span class="o">.</span><span class="n">page</span><span class="o">==</span><span class="s1">&#39;Thumbs Up&#39;</span><span class="p">)</span> \
@@ -13630,7 +13650,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_thumbsdown</span> <span class="o">=</span> <span class="n">df_valid</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df_valid</span><span class="o">.</span><span class="n">page</span><span class="o">==</span><span class="s1">&#39;Thumbs Down&#39;</span><span class="p">)</span> \
@@ -13652,7 +13672,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_singers</span> <span class="o">=</span> <span class="n">df_valid</span><span class="o">.</span><span class="n">dropDuplicates</span><span class="p">([</span><span class="s1">&#39;userId&#39;</span><span class="p">,</span><span class="s1">&#39;artist&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;userId&#39;</span><span class="p">)</span> \
@@ -13667,7 +13687,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_singers</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -13731,7 +13751,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_final</span> <span class="o">=</span> <span class="n">df_valid</span><span class="o">.</span><span class="n">dropDuplicates</span><span class="p">([</span><span class="s1">&#39;userId&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s1">&#39;userId&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="s1">&#39;userId&#39;</span><span class="p">,</span><span class="s1">&#39;churn&#39;</span><span class="p">])</span>
@@ -13746,7 +13766,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_final</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -13811,7 +13831,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_final</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;churn&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -13848,7 +13868,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_final</span><span class="o">.</span><span class="n">dtypes</span>
@@ -13864,7 +13884,7 @@ only showing top 20 rows
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[30]:</div>
+<div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -13887,7 +13907,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># convert data type of columns into float</span>
@@ -13902,7 +13922,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_final</span><span class="o">.</span><span class="n">dtypes</span>
@@ -13918,7 +13938,7 @@ only showing top 20 rows
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[32]:</div>
+<div class="prompt output_prompt">Out[33]:</div>
 
 
 
@@ -13949,7 +13969,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_final</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -13990,10 +14010,10 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="n">df_final</span><span class="o">.</span><span class="n">randomSplit</span><span class="p">([</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="n">df_final</span><span class="o">.</span><span class="n">randomSplit</span><span class="p">([</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -14011,10 +14031,10 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">assembler</span> <span class="o">=</span> <span class="n">VectorAssembler</span><span class="p">(</span><span class="n">inputCols</span><span class="o">=</span><span class="n">df_final</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span><span class="n">outputCol</span><span class="o">=</span><span class="s1">&#39;featuresassemble&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">assembler</span> <span class="o">=</span> <span class="n">VectorAssembler</span><span class="p">(</span><span class="n">inputCols</span><span class="o">=</span><span class="n">df_final</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">2</span><span class="p">:],</span><span class="n">outputCol</span><span class="o">=</span><span class="s1">&#39;featuresassemble&#39;</span><span class="p">)</span>
 <span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">(</span><span class="n">inputCol</span><span class="o">=</span><span class="s2">&quot;featuresassemble&quot;</span><span class="p">,</span> <span class="n">outputCol</span><span class="o">=</span><span class="s2">&quot;features&quot;</span><span class="p">,</span> <span class="n">withStd</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">indexer</span> <span class="o">=</span> <span class="n">StringIndexer</span><span class="p">(</span><span class="n">inputCol</span><span class="o">=</span><span class="s2">&quot;churn&quot;</span><span class="p">,</span> <span class="n">outputCol</span><span class="o">=</span><span class="s2">&quot;label&quot;</span><span class="p">)</span>
 
@@ -14031,7 +14051,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pipeline_lr</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">stages</span><span class="o">=</span><span class="p">[</span><span class="n">assembler</span><span class="p">,</span> <span class="n">scaler</span><span class="p">,</span> <span class="n">indexer</span><span class="p">,</span> <span class="n">lr</span><span class="p">])</span>
@@ -14054,7 +14074,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cvModel_lr</span> <span class="o">=</span> <span class="n">crossval_lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
@@ -14067,7 +14087,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cvModel_lr</span><span class="o">.</span><span class="n">avgMetrics</span>
@@ -14083,13 +14103,13 @@ only showing top 5 rows
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[38]:</div>
+<div class="prompt output_prompt">Out[66]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[1.0, 1.0, 1.0]</pre>
+<pre>[0.587289794097023, 0.5781955600178491, 0.5905883852871805]</pre>
 </div>
 
 </div>
@@ -14100,13 +14120,35 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">cvModel_lr</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># test performance</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">cvModel_lr</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+<span class="n">BinaryClassificationEvaluator</span><span class="p">()</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[73]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.554396423248882</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -14115,24 +14157,22 @@ only showing top 5 rows
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="compute-F1-score-for-test-data-for-logistic-regression-model">compute F1 score for test data for logistic regression model<a class="anchor-link" href="#compute-F1-score-for-test-data-for-logistic-regression-model">&#182;</a></h4>
+<p>it seems inverse of regularization strength as 0.01 yields the best validation performance.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tp</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;label = 1 and prediction = 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-<span class="n">fp</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;label = 0 and prediction = 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-<span class="n">fn</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;label = 1 and prediction = 0&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-<span class="n">precision</span> <span class="o">=</span> <span class="n">tp</span> <span class="o">/</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fp</span><span class="p">)</span> 
-<span class="n">recall</span> <span class="o">=</span> <span class="n">tp</span> <span class="o">/</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fn</span><span class="p">)</span>
-<span class="n">f1</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">precision</span><span class="o">*</span><span class="n">recall</span> <span class="o">/</span> <span class="p">(</span><span class="n">precision</span><span class="o">+</span><span class="n">recall</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">precision</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">recall</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># change the random seed when splitting the data into train and test.</span>
+<span class="n">train_2</span><span class="p">,</span> <span class="n">test_2</span> <span class="o">=</span> <span class="n">df_final</span><span class="o">.</span><span class="n">randomSplit</span><span class="p">([</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="n">seed</span><span class="o">=</span><span class="mi">43</span><span class="p">)</span>
+<span class="n">cvModel_lr_2</span> <span class="o">=</span> <span class="n">crossval_lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cvModel_lr_2</span><span class="o">.</span><span class="n">avgMetrics</span><span class="p">)</span>
+<span class="n">results_2</span> <span class="o">=</span> <span class="n">cvModel_lr</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">test_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">BinaryClassificationEvaluator</span><span class="p">()</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">results_2</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -14149,9 +14189,45 @@ only showing top 5 rows
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1.0
-1.0
-1.0
+<pre>[0.563765684070515, 0.5365736734633662, 0.5646643978599547]
+0.6021505376344086
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># again, change the random seed when splitting the data into train and test.</span>
+<span class="n">train_3</span><span class="p">,</span> <span class="n">test_3</span> <span class="o">=</span> <span class="n">df_final</span><span class="o">.</span><span class="n">randomSplit</span><span class="p">([</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="n">seed</span><span class="o">=</span><span class="mi">44</span><span class="p">)</span>
+<span class="n">cvModel_lr_3</span> <span class="o">=</span> <span class="n">crossval_lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cvModel_lr_3</span><span class="o">.</span><span class="n">avgMetrics</span><span class="p">)</span>
+<span class="n">results_3</span> <span class="o">=</span> <span class="n">cvModel_lr</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">test_3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">BinaryClassificationEvaluator</span><span class="p">()</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">results_3</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0.582045142557937, 0.5844952375385841, 0.587534908261073]
+0.6142857142857142
 </pre>
 </div>
 </div>
@@ -14170,13 +14246,13 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pipeline_rf</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">stages</span><span class="o">=</span><span class="p">[</span><span class="n">assembler</span><span class="p">,</span> <span class="n">scaler</span><span class="p">,</span> <span class="n">indexer</span><span class="p">,</span> <span class="n">stringIndexer</span><span class="p">,</span> <span class="n">rf</span><span class="p">])</span>
 
 <span class="n">paramGrid_rf</span> <span class="o">=</span> <span class="n">ParamGridBuilder</span><span class="p">()</span> \
-    <span class="o">.</span><span class="n">addGrid</span><span class="p">(</span><span class="n">rf</span><span class="o">.</span><span class="n">numTrees</span><span class="p">,[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">])</span> \
+    <span class="o">.</span><span class="n">addGrid</span><span class="p">(</span><span class="n">rf</span><span class="o">.</span><span class="n">numTrees</span><span class="p">,[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">])</span> \
     <span class="o">.</span><span class="n">build</span><span class="p">()</span>
 
 
@@ -14201,7 +14277,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cvModel_rf</span> <span class="o">=</span> <span class="n">crossval_rf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
@@ -14214,7 +14290,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cvModel_rf</span><span class="o">.</span><span class="n">avgMetrics</span>
@@ -14230,13 +14306,13 @@ only showing top 5 rows
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[43]:</div>
+<div class="prompt output_prompt">Out[78]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[1.0, 1.0, 1.0]</pre>
+<pre>[0.594048376043858, 0.569154554726844]</pre>
 </div>
 
 </div>
@@ -14247,7 +14323,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">cvModel_rf</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
@@ -14260,20 +14336,10 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tp</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;label = 1 and prediction = 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-<span class="n">fp</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;label = 0 and prediction = 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-<span class="n">fn</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;label = 1 and prediction = 0&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-
-<span class="n">precision</span> <span class="o">=</span> <span class="n">tp</span> <span class="o">/</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fp</span><span class="p">)</span> 
-<span class="n">recall</span> <span class="o">=</span> <span class="n">tp</span> <span class="o">/</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fn</span><span class="p">)</span>
-
-<span class="n">f1</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">precision</span><span class="o">*</span><span class="n">recall</span> <span class="o">/</span> <span class="p">(</span><span class="n">precision</span><span class="o">+</span><span class="n">recall</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">precision</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">recall</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">BinaryClassificationEvaluator</span><span class="p">()</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">results</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -14290,9 +14356,81 @@ only showing top 5 rows
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1.0
-1.0
-1.0
+<pre>0.6296572280178837
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># change the random seed when splitting the data into train and test.</span>
+<span class="n">train_2</span><span class="p">,</span> <span class="n">test_2</span> <span class="o">=</span> <span class="n">df_final</span><span class="o">.</span><span class="n">randomSplit</span><span class="p">([</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="n">seed</span><span class="o">=</span><span class="mi">43</span><span class="p">)</span>
+<span class="n">cvModel_rf_2</span> <span class="o">=</span> <span class="n">crossval_rf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cvModel_rf_2</span><span class="o">.</span><span class="n">avgMetrics</span><span class="p">)</span>
+<span class="n">results_2</span> <span class="o">=</span> <span class="n">cvModel_rf_2</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">test_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">BinaryClassificationEvaluator</span><span class="p">()</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">results_2</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0.5958127423252715, 0.5794977045687456]
+0.6397849462365591
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># again, change the random seed when splitting the data into train and test.</span>
+<span class="n">train_3</span><span class="p">,</span> <span class="n">test_3</span> <span class="o">=</span> <span class="n">df_final</span><span class="o">.</span><span class="n">randomSplit</span><span class="p">([</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="n">seed</span><span class="o">=</span><span class="mi">44</span><span class="p">)</span>
+<span class="n">cvModel_rf_3</span> <span class="o">=</span> <span class="n">crossval_rf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cvModel_rf_3</span><span class="o">.</span><span class="n">avgMetrics</span><span class="p">)</span>
+<span class="n">results_3</span> <span class="o">=</span> <span class="n">cvModel_rf_3</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">test_3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">BinaryClassificationEvaluator</span><span class="p">()</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">results_3</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0.584391436963648, 0.5889437020713882]
+0.530952380952381
 </pre>
 </div>
 </div>

@@ -17,5 +17,20 @@ The size of original datasets is 12GB. Due to the limited computation power of f
 2. Matplotlib for visualization.
 3. IBM Cloud(free) or other Clould sevices.
 
+## Summary of Project
+Procedures of analysis:  
+1. data cleaning
+2. data exploration
+3. feature engineering
+4. modelling
+5. deploy on IBM cloud
+
+Results:  
+Two models, logistice regression and random forest, with different hyperparameters are tested. Random forest was found to 
+yield better performance (AUC score of 0.6) thus was selected as final proposal.
+
 ## Other deliverables
 Summary and some flections on this project: [Medium post](https://medium.com/@jlm3448179892009/get-my-hands-dirty-with-big-data-for-the-first-time-50788c975cef)
+
+## Acknowledgement
+The dataset is kindly provided by Udacity team. And some instructions in the notebook are also well prepared by Udacity team.
